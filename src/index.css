@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+@font-face{
+    font-family: "Inter-Light-BETA";
+    src:local("Inter-Light-BETA"),
+    /* url(./assets/fonts/Inter-Light-BETA.ttf) format(ttf) */
+    url(./assets/fonts/Inter-Light-BETA.ttf) format('truetype');
+}
+.fontAdd{
+    font-family:"Inter-Light-BETA" ;
+}
+
+.fontForum{
+    font-family: 'Forum', cursive;
+}
