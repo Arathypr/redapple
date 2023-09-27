@@ -1,15 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./PageTwo.css";
 import redapplepagetwo from "../../assets/SecondPageRedapple.png";
 import secondPageButton from "../../assets/SecondPageButton.png";
 
 const PageTwo = () => {
+  const [letterAnimation, setLetterAnimation] = useState([]);
+  const text = "We are here for you";
+
+  useEffect(() => {
+    const animationElements = [];
+    const words = text.split(" ");
+
+    words.forEach((word, wordIndex) => {
+      const letters = word.split("");
+      letters.forEach((letter, letterIndex) => {
+        animationElements.push(
+          <span
+            key={`${wordIndex}-${letterIndex}`}
+            className="animated-letter"
+            style={{
+              animationDelay: `${wordIndex * 0.5 + letterIndex * 0.1}s`,
+            }}
+          >
+            {letter}
+          </span>
+        );
+      });
+
+      if (wordIndex < words.length - 1) {
+        animationElements.push(" ");
+      }
+    });
+
+    setLetterAnimation(animationElements); // Update the state variable with the animation elements
+  }, []);
   return (
-    <div className=" landscape flex flex-col justify-center items-center  h-[100vh] gap-[10px] ">
+    <div className="  landscape flex flex-col justify-center items-center  h-[100vh] gap-[10px] ">
       {/* upper division */}
       <div className=" flex flex-col justify-center items-center  sm:w-[100%] vvsm:w-[90%]  vvsm:mt-[40px]     ">
         <p className="  font-Forum font-normal  lg:text-[50px] md:text-[45px]  ssm:text-[35px] vsm:text-[30px]  ">
-          We are here for you
+          {letterAnimation}
         </p>
 
         {/* paragraph */}

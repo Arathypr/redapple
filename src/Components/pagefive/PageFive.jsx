@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import zoomimg from "../../assets/zoom.png";
-import staytuned from "../../assets/Stay Tuned.png"; // Import your additional image
+import staytuned from "../../assets/Stay Tuned.png";
 
 function PageFive() {
   const animationVariants = {

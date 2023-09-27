@@ -32,7 +32,7 @@ const PageEleven = () => {
         <img
           src={round}
           alt=""
-          className="vsm:w-[130px] vsm:h-[130px] vvsm:w-[80px] vvsm:h-[80px]"
+          className=" animate-spin-slow vsm:w-[130px] vsm:h-[130px] vvsm:w-[80px] vvsm:h-[80px]"
         />
         <img
           src={applelogo}
