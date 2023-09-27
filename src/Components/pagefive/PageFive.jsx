@@ -73,7 +73,10 @@ function PageFive() {
       className="zoom "
       style={{ width: "100%", height: "100vh", overflow: "hidden" }}
     >
-      <div className="zoom-content " style={zoomStyle}>
+      <div
+        className="zoom-content flex  w-[100%] h-screen  justify-center items-center "
+        style={zoomStyle}
+      >
         {isZoomedIn && (
           <div
             style={{
@@ -91,11 +94,11 @@ function PageFive() {
           <motion.div
             initial="initial"
             animate="animate"
-            className="absolute left-[10%] right-[10%] top-[30%] z-20 opacity-100 text-center text-white font-Poppins "
+            className="absolute z-20 opacity-100 text-center text-white font-Poppins "
             exit="exit"
             variants={animationVariants}
           >
-            <div className="flex flex-col  justify-evenly items-center  w-[1200px]  gap-8">
+            <div className="flex flex-col  justify-evenly items-center  w-[1200px]  gap-8 ">
               <div className="flex flex-col gap-8">
                 <div className="text-4xl  tracking-wide   lg:text-4xl md:text-3xl sm:text-2xl ssm:text-xl vsm:text-lg vvsm:text-base ">
                   Stay Tuned With Us
