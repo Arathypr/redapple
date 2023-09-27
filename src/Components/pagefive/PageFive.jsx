@@ -98,7 +98,7 @@ function PageFive() {
             exit="exit"
             variants={animationVariants}
           >
-            <div className="flex flex-col  justify-evenly items-center  w-[1200px]  gap-8 ">
+            <div className="flex flex-col  justify-evenly items-center  sm:w-[1200px] ssm:w-[1000px] vsm:w-[900px] gap-8 ">
               <div className="flex flex-col gap-8">
                 <div className="text-4xl  tracking-wide   lg:text-4xl md:text-3xl sm:text-2xl ssm:text-xl vsm:text-lg vvsm:text-base ">
                   Stay Tuned With Us
@@ -108,12 +108,11 @@ function PageFive() {
                   COMING SOON !!!
                 </div>
               </div>
-              <div className="flex  w-[100%] justify-between items-center px-11 ">
+              <div className="flex  w-[100%] justify-between items-center lg:px-14 md:px-[6rem] sm:px-[8rem] ssm:px-16 vsm:px-6 ">
                 <div className=" bg-[#ffff]  h-[1px] w-[300px] "></div>
-                <div className="text-4xl tracking-wide lg:text-4xl md:text-3xl sm:text-2xl ssm:text-xl vsm:text-lg vvsm:text-base">
+                <div className="text-4xl tracking-wide lg:text-4xl md:text-3xl sm:text-2xl ssm:text-xl vsm:text-lg vvsm:text-base ">
                   Featuring Akris Collection
                 </div>
-
                 <div className="bg-[#ffff]  h-[1px] w-[300px] "></div>
               </div>
             </div>
