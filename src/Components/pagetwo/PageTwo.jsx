@@ -1,13 +1,14 @@
 import React from "react";
+import "./PageTwo.css";
 import redapplepagetwo from "../../assets/SecondPageRedapple.png";
 import secondPageButton from "../../assets/SecondPageButton.png";
 
 const PageTwo = () => {
   return (
-    <div className=" flex flex-col justify-center items-center  h-[100vh] gap-[10px]  md:landscape:h-[250vh] ">
+    <div className=" landscape flex flex-col justify-center items-center  h-[100vh] gap-[10px] ">
       {/* upper division */}
-      <div className=" flex flex-col justify-center items-center  sm:w-[100%] vvsm:w-[90%]  vvsm:mt-[40px]   ">
-        <p className="font-Forum font-normal  lg:text-[50px] md:text-[45px]  ssm:text-[35px] vsm:text-[30px]  ">
+      <div className=" flex flex-col justify-center items-center  sm:w-[100%] vvsm:w-[90%]  vvsm:mt-[40px]     ">
+        <p className="  font-Forum font-normal  lg:text-[50px] md:text-[45px]  ssm:text-[35px] vsm:text-[30px]  ">
           We are here for you
         </p>
 

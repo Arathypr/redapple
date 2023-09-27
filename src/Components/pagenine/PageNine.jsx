@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import pagenine from "../../assets/PageNine.png";
 
 const PageNine = () => {
   return (
-        <div className='bg-gray-200 w-[100%] h-screen'>
-          
-        </div>
-  )
-}
+    <div className="h-screen w-[100%]">
+      <img src={pagenine} className="h-screen  w-[100%]" alt="" />
+    </div>
+  );
+};
 
-export default PageNine
+export default PageNine;

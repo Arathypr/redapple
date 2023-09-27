@@ -1,13 +1,140 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import zoomimg from "../../assets/zoom.png";
+import staytuned from "../../assets/Stay Tuned.png"; // Import your additional image
 
-const PageFive = () => {
+function PageFive() {
+  const animationVariants = {
+    initial: { y: "100%", opacity: 0, transition: { duration: 2 } },
+    animate: { y: 0, opacity: 1, transition: { duration: 2 } },
+    exit: { y: "100%", opacity: 0 },
+  };
+  const [zoom, setZoom] = useState(5.5);
+  const MIN_ZOOM = 1;
+  const MAX_ZOOM = 5;
+  const ZOOM_SPEED = 0.08;
+
+  const [showText, setShowText] = useState(false);
+  const [showStayTunedImage, setShowStayTunedImage] = useState(false);
+
+  const handleWheel = (e) => {
+    if (e.deltaY > 0 && zoom > MIN_ZOOM) {
+      setZoom((prevZoom) => Math.max(MIN_ZOOM, prevZoom - ZOOM_SPEED));
+    } else if (e.deltaY < 0 && zoom < MAX_ZOOM) {
+      setZoom((prevZoom) => Math.min(MAX_ZOOM, prevZoom + ZOOM_SPEED));
+    }
+  };
+
+  const isZoomedIn = zoom === MIN_ZOOM;
+
+  // Calculate opacity for the zoomed-in image and text when zoomed in
+  const zoomedElementOpacity = isZoomedIn ? 1 : 1;
+
+  const zoomStyle = {
+    transform: `scale(${zoom})`,
+    opacity: zoomedElementOpacity, // Set opacity based on isZoomedIn
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const fifthPagePosition = window.innerHeight * 3.5;
+
+      if (window.scrollY >= fifthPagePosition) {
+        window.addEventListener("wheel", handleWheel);
+        setShowText(true);
+
+        // Add a delay before showing the staytuned image (e.g., 2000 milliseconds or 2 seconds)
+        const delay = 1000;
+        const showStayTunedImageTimeout = setTimeout(() => {
+          setShowStayTunedImage(true);
+        }, delay);
+
+        return () => {
+          clearTimeout(showStayTunedImageTimeout);
+        };
+      } else {
+        window.removeEventListener("wheel", handleWheel);
+        setShowText(false);
+        // Reset the staytuned image visibility when scrolling away from the fifthPagePosition
+        setShowStayTunedImage(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, [zoom]);
+
   return (
-    <div>
-        <div className='bg-[#ffff] w-full h-screen'>
+    <div
+      className="zoom "
+      style={{ width: "100%", height: "100vh", overflow: "hidden" }}
+    >
+      <div className="zoom-content " style={zoomStyle}>
+        {isZoomedIn && (
+          <div
+            style={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0, 0, 0, 0.35)",
+              zIndex: 1, // Set a lower zIndex to be below the text
+            }}
+          ></div>
+        )}
+        {isZoomedIn && showText && (
+          <motion.div
+            initial="initial"
+            animate="animate"
+            className="absolute left-[10%] right-[10%] top-[30%] z-20 opacity-100 text-center text-white font-Poppins "
+            exit="exit"
+            variants={animationVariants}
+          >
+            <div className="flex flex-col  justify-evenly items-center  w-[1200px]  gap-8">
+              <div className="flex flex-col gap-8">
+                <div className="text-4xl  tracking-wide   lg:text-4xl md:text-3xl sm:text-2xl ssm:text-xl vsm:text-lg vvsm:text-base ">
+                  Stay Tuned With Us
+                </div>
 
-        </div>
+                <div className="text-8xl tracking-wider italic font-extrabold lg:text-7xl md:text-6xl sm:text-5xl ssm:text-[2.5rem] vsm:text-3xl vvsm:text-3xl">
+                  COMING SOON !!!
+                </div>
+              </div>
+              <div className="flex  w-[100%] justify-between items-center px-11 ">
+                <div className=" bg-[#ffff]  h-[1px] w-[300px] "></div>
+                <div className="text-4xl tracking-wide lg:text-4xl md:text-3xl sm:text-2xl ssm:text-xl vsm:text-lg vvsm:text-base">
+                  Featuring Akris Collection
+                </div>
+
+                <div className="bg-[#ffff]  h-[1px] w-[300px] "></div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+        {isZoomedIn && showStayTunedImage && (
+          <img
+            src={staytuned}
+            alt=""
+            className="h-screen w-[100%]"
+            style={{
+              position: "absolute",
+              top: "43.5%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              zIndex: 3,
+              opacity: 0.2, // Set opacity based on isZoomedIn
+            }}
+          />
+        )}
+        <img src={zoomimg} alt="" className=" h-screen w-[100%] object-cover" />
+      </div>
     </div>
-  )
+  );
 }
 
-export default PageFive
+export default PageFive;
