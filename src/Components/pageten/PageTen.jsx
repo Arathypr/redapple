@@ -73,7 +73,7 @@ const PageTen = () => {
         <div className="  flex justify-center items-center  w-[100%] sm:h-0 vvsm:h-[30px]">
           <a
             href="#"
-            class=" no-underline font-Lora font-normal lg:text-[22px] vvsm:text-[18px]"
+            className=" no-underline font-Lora font-normal lg:text-[22px] vvsm:text-[18px]"
           >
             INSTAGRAM
           </a>

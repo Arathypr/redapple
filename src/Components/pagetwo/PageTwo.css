@@ -11,3 +11,8 @@
     transform: translateY(0);
   }
 }
+.arrow {
+  display: inline-block;
+  transform: rotate(-25deg);
+  padding-left: 5%;
+}

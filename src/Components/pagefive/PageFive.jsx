@@ -133,7 +133,7 @@ function PageFive() {
             }}
           />
         )}
-        <img src={zoomimg} alt="" className=" h-screen w-[100%] object-cover" />
+        <img src={zoomimg} alt="" className=" h-screen w-screen object-cover" />
       </div>
     </div>
   );

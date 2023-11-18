@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./PageTwo.css";
 import redapplepagetwo from "../../assets/SecondPageRedapple.png";
-import secondPageButton from "../../assets/SecondPageButton.png";
+import LiquidButton from "../liquidbutton/LiquidButton";
 
 const PageTwo = () => {
   const [letterAnimation, setLetterAnimation] = useState([]);
-  const text = "We are here for you";
+  const text = "e are here for you";
 
   useEffect(() => {
     const animationElements = [];
@@ -39,7 +39,7 @@ const PageTwo = () => {
       {/* upper division */}
       <div className=" flex flex-col justify-center items-center  sm:w-[100%] vvsm:w-[90%]  vvsm:mt-[40px]     ">
         <p className="  font-Forum font-normal  lg:text-[50px] md:text-[45px]  ssm:text-[35px] vsm:text-[30px]  ">
-          {letterAnimation}
+          W{letterAnimation}
         </p>
 
         {/* paragraph */}
@@ -84,11 +84,11 @@ const PageTwo = () => {
           </p>
 
           <div>
-            <img
-              src={secondPageButton}
-              alt=""
-              className="sm:w-[60%]  sm:mt-[20px] hidden sm:block "
-            />
+            <div className="sm:w-[60%]  sm:mt-[20px] hidden sm:block ">
+              <LiquidButton className="arrow">
+                Book a call<span className="arrow">&rarr;</span>
+              </LiquidButton>
+            </div>
           </div>
         </div>
       </div>

@@ -13,6 +13,8 @@
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.19.0",
+    "react-scroll-parallax": "^3.4.3",
     "react-skrollr": "^1.0.4",
     "react-slick": "^0.29.0",
     "react-use-scroll-snap": "^0.0.4",
