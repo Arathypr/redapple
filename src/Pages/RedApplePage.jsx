@@ -1,5 +1,6 @@
 import React from "react";
 import HomePage from "../Components/homepage/HomePage";
+import Circle from "../Components/Circle/Circle";
 import PageTwo from "../Components/pagetwo/PageTwo";
 import PageThree from "../Components/pagethree/PageThree";
 import PageFour from "../Components/pagefour/PageFour";
@@ -15,6 +16,7 @@ const RedApplePage = () => {
   return (
     <>
       <HomePage />
+      {/* <Circle /> */}
       <PageTwo />
       <PageThree />
       <PageFour />
