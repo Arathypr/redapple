@@ -1,38 +1,8 @@
-/* .container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.mask {
-  width: 22%;
-  height: 47.5%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  background-image: url("../../assets/shape.png");
-  background-size: cover;
-  clip-path: circle(100% at 50% 50%); 
-  transition: clip-path 0.5s ease; 
-} */
 .svgblob {
   position: relative;
   overflow: hidden;
   width: 100%;
-  width: 100%;
-
+  height: 100vh;
   box-sizing: border-box;
 }
 
@@ -49,7 +19,7 @@
 [id^="blobmask"] rect {
   fill: #eee;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 [id^="blobmask"] path {
@@ -64,23 +34,19 @@
   transform: none;
 }
 
-.svgblob path {
-  animation: rotatepath 47s linear 0s infinite;
-}
-
-.svgblob img {
+.svbglob {
   position: relative;
-  z-index: -1;
   width: 100%;
   height: 100vh;
-  display: block;
+  overflow: hidden;
 }
 
-@keyframes rotatepath {
-  0% {
-    transform: translate(50%, 50%) scale(1) rotateZ(360deg);
-  }
-  100% {
-    transform: translate(50%, 50%) scale(1) rotateZ(0deg);
-  }
+.launching-soon-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
