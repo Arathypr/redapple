@@ -15,7 +15,7 @@ import PageEleven from "../Components/pageevelen/PageEleven";
 const RedApplePage = () => {
   return (
     <>
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <Circle /> */}
       <PageTwo />
       <PageThree />

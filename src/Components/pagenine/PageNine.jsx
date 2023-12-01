@@ -97,7 +97,9 @@ const PageNine = () => {
             width="100%"
             height="100%"
             mask="url('#blobmask')"
-            fill="#3F94F5 "
+            fill="#144BEE
+          
+             "
           ></rect>
         </svg>
 
