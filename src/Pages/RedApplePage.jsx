@@ -11,12 +11,15 @@ import PageEight from "../Components/pageeight/PageEight";
 import PageNine from "../Components/pagenine/PageNine";
 import PageTen from "../Components/pageten/PageTen";
 import PageEleven from "../Components/pageevelen/PageEleven";
+import MaskedImage from "../Components/homepage/SvgFile";
+import YourSvgComponent from "../Components/homepage/SvgFile";
 
 const RedApplePage = () => {
   return (
     <>
-      <HomePage />
+      {/* <HomePage /> */}
       {/* <Circle /> */}
+      <YourSvgComponent />
       <PageTwo />
       <PageThree />
       <PageFour />

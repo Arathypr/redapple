@@ -1,4 +1,4 @@
-.logo {
+/* .logo {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -38,4 +38,29 @@
 }
 p font-family helvetica {
   font-size: 24px;
+} */
+.homepage-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.svg-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  mask: url(#customMask); /* Adjust the mask ID as needed */
 }
