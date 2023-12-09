@@ -15,7 +15,7 @@ const MaskSVG = () => (
       clipRule: "evenodd",
     }}
     viewBox="0 0 5000 3600"
-    xmlnsXlink="http://www.w3.org/1999/xlink" 
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     xmlnsXodm="http://www.corel.com/coreldraw/odm/2003"
   >
     <defs>
@@ -24,7 +24,8 @@ const MaskSVG = () => (
           .fil0 {fill:#FEFEFE}
         `}
       </style>
-    </defs>g
+    </defs>
+    g
     <g id="Layer_x0020_1">
       <metadata id="CorelCorpID_0Corel-Layer" />
       <polygon
@@ -35,10 +36,4 @@ const MaskSVG = () => (
   </svg>
 );
 
-
-
-
-
-                                 
-
-               
+export default MaskSVG;

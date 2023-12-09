@@ -1,5 +1,5 @@
 import React from "react";
-import HomePage from "../Components/homepage/HomePage";
+import HomePage from "../Components/homepage/HomePage1";
 import Circle from "../Components/Circle/Circle";
 import PageTwo from "../Components/pagetwo/PageTwo";
 import PageThree from "../Components/pagethree/PageThree";
@@ -13,13 +13,15 @@ import PageTen from "../Components/pageten/PageTen";
 import PageEleven from "../Components/pageevelen/PageEleven";
 import MaskedImage from "../Components/homepage/SvgFile";
 import YourSvgComponent from "../Components/homepage/SvgFile";
+import OrientationMessage from "../Components/OrientateionMessage/OrientationMessage";
 
 const RedApplePage = () => {
   return (
     <>
+      <OrientationMessage />
       {/* <HomePage /> */}
       {/* <Circle /> */}
-      <YourSvgComponent />
+      {/* <YourSvgComponent /> */}
       <PageTwo />
       <PageThree />
       <PageFour />

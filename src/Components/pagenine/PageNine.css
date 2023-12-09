@@ -50,3 +50,6 @@
   object-fit: cover;
   z-index: 1;
 }
+.svgblob-small {
+  height: 100vh;
+}

@@ -97,9 +97,7 @@ const PageNine = () => {
             width="100%"
             height="100%"
             mask="url('#blobmask')"
-            fill="#144BEE
-          
-             "
+            fill="#144BEE"
           ></rect>
         </svg>
 
@@ -109,7 +107,7 @@ const PageNine = () => {
           className="launching-soon-image"
         />
 
-        <img src={pagenine} alt="" className="w-screen h-screenb3" />
+        <img src={pagenine} alt="" className="w-screen h-screen" />
       </div>
     </div>
   );

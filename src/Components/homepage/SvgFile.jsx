@@ -1,92 +1,36 @@
-// import React from "react";
-// import Landingpage from "../../assets/Homepageimage.png";
-
-// const YourSvgComponent = () => {
-//   return (
-//     <div
-//       style={{
-//         position: "sticky",
-//         bottom: 0,
-//         left: "50%",
-//         transform: "translateX(-50%)",
-//       }}
-//     >
-//       <svg
-//         width="300"
-//         height="280"
-//         preserveAspectRatio="xMidYMid meet"
-//         xmlns="http://www.w3.org/2000/svg"
-//       >
-//         <defs>
-//           <mask id="shape">
-//             <path d="M0 0h2000v3500H0z" fill="#d8d8d8" />
-//           </mask>
-//         </defs>
-//         <image
-//           mask="url(#shape)"
-//           preserveAspectRatio="xMidYMid meet"
-//           x="0"
-//           y="0"
-//           href={Landingpage}
-//         />
-//       </svg>
-//     </div>
-//   );
-// };
-
-// export default YourSvgComponent;
-
-// import React from "react";
-// import "./Homepage.css";
-// import Landingpage from "../../assets/Homepageimage.png";
-
-// const YourSvgComponent = () => {
-//   return (
-//     <div className="svg-container">
-//       <img src={Landingpage} alt="Background" className="background-image" />
-//       <svg
-//         width="100%"
-//         height="100%"
-//         preserveAspectRatio="xMidYMid meet"
-//         xmlns="http://www.w3.org/2000/svg"
-//         className="svg-mask"
-//       >
-//         <defs>
-//           <mask id="shape">
-//             <path d="M0 0h2000v3500H0z" fill="#d8d8d8" />
-//           </mask>
-//         </defs>
-//         <image
-//           mask="url(#shape)"
-//           preserveAspectRatio="xMidYMid meet"
-//           x="0"
-//           y="0"
-//           href={Landingpage}
-//           width="100%"
-//           height="100%"
-//         />
-//       </svg>
-//     </div>
-//   );
-// };
-
-// export default YourSvgComponent;
 import React from "react";
-import "./Homepage.css";
+import "./HomePage.css"; // Make sure to import your CSS file
 import Landingpage from "../../assets/Homepageimage.png";
-import MaskSVG from "./MaskedSVG"; // Adjust the path accordingly
+import MaskSvg from "../../assets/rectanglesvg.svg";
 
-const Homepage = () => {
+const YourSvgComponent = () => {
   return (
-    <div className="homepage-container">
-      <div className="background-image">
-        <img src={Landingpage} alt="Homepage Background" />
-      </div>
-      <div className="svg-mask">
-        <MaskSVG />
-      </div>
+    <div className="bgimage">
+      <img className="masked-image" src={Landingpage} alt="Homepage Image" />
+      <svg
+        className="clip-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+      >
+        <defs>
+          <clipPath id="svg-clip">
+            <image
+              href={MaskSvg}
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+            />
+          </clipPath>
+        </defs>
+        <rect
+          width="100%"
+          height="100%"
+          clipPath="url(#svg-clip)"
+          fill="#fff"
+        />
+      </svg>
     </div>
   );
 };
 
-export default Homepage;
+export default YourSvgComponent;

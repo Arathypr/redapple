@@ -1,4 +1,4 @@
-/* .logo {
+.logo {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -38,7 +38,8 @@
 }
 p font-family helvetica {
   font-size: 24px;
-} */
+}
+
 .homepage-container {
   position: relative;
   width: 100%;
@@ -63,4 +64,42 @@ p font-family helvetica {
   height: 100%;
   z-index: 2;
   mask: url(#customMask); /* Adjust the mask ID as needed */
+}
+/* .bgimage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/Homepageimage.png");
+  background-size: cover;
+}
+
+.bgimage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/rectanglesvg.svg");
+  background-size: 100%;
+  background-position: center;
+  mix-blend-mode: screen;
+} */
+.zoom-out {
+  transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.image {
+  height: 50vh;
+  width: 20%;
+  margin: auto;
+  background-image: url("../../assets/Homepageimage.png");
+  background-position: center center;
+  background-size: cover;
 }

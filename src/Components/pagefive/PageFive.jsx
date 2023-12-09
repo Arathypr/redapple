@@ -27,12 +27,11 @@ function PageFive() {
 
   const isZoomedIn = zoom === MIN_ZOOM;
 
-  // Calculate opacity for the zoomed-in image and text when zoomed in
   const zoomedElementOpacity = isZoomedIn ? 1 : 1;
 
   const zoomStyle = {
     transform: `scale(${zoom})`,
-    opacity: zoomedElementOpacity, // Set opacity based on isZoomedIn
+    opacity: zoomedElementOpacity,
   };
 
   useEffect(() => {
@@ -43,7 +42,6 @@ function PageFive() {
         window.addEventListener("wheel", handleWheel);
         setShowText(true);
 
-        // Add a delay before showing the staytuned image (e.g., 2000 milliseconds or 2 seconds)
         const delay = 1000;
         const showStayTunedImageTimeout = setTimeout(() => {
           setShowStayTunedImage(true);
@@ -55,7 +53,7 @@ function PageFive() {
       } else {
         window.removeEventListener("wheel", handleWheel);
         setShowText(false);
-        // Reset the staytuned image visibility when scrolling away from the fifthPagePosition
+
         setShowStayTunedImage(false);
       }
     };
@@ -86,7 +84,7 @@ function PageFive() {
               width: "100%",
               height: "100%",
               backgroundColor: "rgba(0, 0, 0, 0.35)",
-              zIndex: 1, // Set a lower zIndex to be below the text
+              zIndex: 1,
             }}
           ></div>
         )}
@@ -129,7 +127,7 @@ function PageFive() {
               left: "50%",
               transform: "translate(-50%, -50%)",
               zIndex: 3,
-              opacity: 0.2, // Set opacity based on isZoomedIn
+              opacity: 0.2,
             }}
           />
         )}

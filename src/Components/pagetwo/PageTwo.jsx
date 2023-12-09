@@ -35,30 +35,55 @@ const PageTwo = () => {
     setLetterAnimation(animationElements); // Update the state variable with the animation elements
   }, []);
   return (
-    <div className="  landscape flex flex-col justify-center items-center  h-[100vh] gap-[10px] ">
+    <div className="  landscape flex flex-col justify-center items-center h-[100vh]  gap-[10px] ">
       {/* upper division */}
       <div className=" flex flex-col justify-center items-center  sm:w-[100%] vvsm:w-[90%]  vvsm:mt-[40px]     ">
-        <p className="  font-Forum font-normal  lg:text-[50px] md:text-[45px]  ssm:text-[35px] vsm:text-[30px]  ">
+        <p className="  font-Forum font-normal  lg:text-[50px] md:text-[45px]  ssm:text-[40px] vsm:text-[36px]  vvsm:text-[25px]  ">
           W{letterAnimation}
         </p>
 
         {/* paragraph */}
-
-        <div className=" flex flex-col justify-center items-center  w-[100%] sm:h-[120px] sm:mt-0   ">
-          <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
-            We are one of the unique apparel industries in India where trend is
-            handy to all. Explore our daily arrivals{" "}
+        <div className="sm:block hidden">
+          <div className=" flex flex-col justify-center items-center  w-[100%] sm:h-[120px] sm:mt-0   ">
+            <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
+              We are one of the unique apparel industries in India where trend
+              is handy to all. Explore our daily arrivals{" "}
+            </div>
+            <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
+              to view the modish designer clothing, footwear and accessories in
+              the market. Red Apple Apparels
+            </div>
+            <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
+              essentially targeted at the domestic and international brands, we
+              are primarily manufacturers of all
+            </div>
+            <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
+              categories of casual and formal apparels.
+            </div>
           </div>
-          <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
-            to view the modish designer clothing, footwear and accessories in
-            the market. Red Apple Apparels
-          </div>
-          <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
-            essentially targeted at the domestic and international brands, we
-            are primarily manufacturers of all
-          </div>
-          <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
-            categories of casual and formal apparels.
+        </div>
+        {/* smaller screen ssm */}
+        <div className="ssm:block sm:hidden">
+          <div className=" flex flex-col justify-center items-center  w-[100%] sm:h-[120px] sm:mt-0   ">
+            <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
+              We are one of the unique apparel industries in India where trend
+              is handy to all. Explore our daily arrivals to view the modish
+              designer clothing, footwear and accessories in the market. Red
+              Apple Apparels essentially targeted at the domestic and
+              international brands, we are primarily manufacturers of all
+              categories of casual and formal apparels.
+            </div>
+            {/* <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
+              to view the modish designer clothing, footwear and accessories in
+              the market. Red Apple Apparels
+            </div>
+            <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
+              essentially targeted at the domestic and international brands, we
+              are primarily manufacturers of all
+            </div>
+            <div className="fontAdd      lg:text-[16px] md:text-[15px] sm:text-[13px]  ssm:text-[13px] vsm:text-[13px] vvsm:text-[11px] ">
+              categories of casual and formal apparels.
+            </div> */}
           </div>
         </div>
       </div>
